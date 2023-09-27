@@ -19,7 +19,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
     }
     
     @IBAction func getRatesClicked(_ sender: Any) {
@@ -58,16 +57,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                             
                             if let info = errorResponse?.value(forKey: "info") as? String {
                                 self.infoData = info
-                                //let lmError:String = String(code)+" "+info+" "+type
-                                //self.showAlert(error: lmError)
                             }
                             
-                            //let lmError:String = String(code)+" "+type
                             let lmError:String = String(code)+" "+self.infoData+" "+type
                             self.showAlert(error: lmError)
-                            
-                            
-                            
                             
                         }else{
                             
